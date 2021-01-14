@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-import { addEmail } from "./reducer";
+//import { addEmail } from "./reducer";
 
 function App() {
   const [result, setResult] = useState(JSON.stringify({}));
-  const dispatch = useDispatch();
-  const { register, handleSubmit, watch, errors } = useForm();
+  // const dispatch = useDispatch();
+  const { register, handleSubmit, watch } = useForm();
 
-  const email = useSelector((state) => state.email);
+  //const email = useSelector((state) => state.email);
 
   const onSubmit = (data) => {
     setResult(JSON.stringify(data));
